@@ -2,7 +2,7 @@
 layout: docs
 title: Creating a Plugin
 prev_section: installation
-next_section: source-factories
+next_section: creating-a-source-factory
 permalink: /docs/creating-a-plugin/
 ---
 
@@ -15,7 +15,7 @@ and others.
 This tutorial will assume you have some knowledge of .NET languages (I will use C# in my examples) and how to configure 
 various dependencies in the Visual Studio Environment.
 
-If you haven't already, you must [download](../download-chp) and [install](../installation) the CLR Host Plugin before
+If you haven't already, you must [download](../../downloads/clr-host-plugin) and [install](../installation) the CLR Host Plugin before
 continuing on with this tutorial.
 
 ## Creating a project
@@ -41,12 +41,12 @@ There are currently two ways of creating a OBS `Plugin` class:
 - Implementing the `Plugin` interface
 - Extending the `AbstractPlugin` class
 
-  If you want finer grained control over the class then you may freely choose implementing the `Plugin` interface.
-  For the sake of brevity we will be using the `AbstractPlugin` class.
+If you want finer grained control over the class then you may freely choose implementing the `Plugin` interface.
+For the sake of brevity we will be using the `AbstractPlugin` class.
 
-  Rename the default Class file generated when you created the project to `MyImagePlugin.cs`.
+Rename the default Class file generated when you created the project to `MyImagePlugin.cs`.
 
-  Open MyImagePlugin.cs and it should look like this:
+Open MyImagePlugin.cs and it should look like this:
 
 {% highlight csharp %}
 using System;
@@ -63,7 +63,6 @@ namespace MyImagePlugin
 }
 
 {% endhighlight %}
-
 
 The first thing we want to do is include the `CLROBS` namespace that all interfaces and classes the CLRHost.Interop belong to.
 
@@ -82,6 +81,7 @@ Then we need to extend the `AbstractPlugin` class so that when the library is lo
 the plugin correctly.
 
 {% highlight csharp %}
+using CLROBS;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,0 +1,17 @@
+---
+layout: default
+downloads: true
+---
+
+  <section class="docs">
+    <div class="grid">
+       <div class="unit four-fifths">
+        <article>
+          <h1>{{ page.title }}</h1>
+          {{ content }}
+        </article>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+  </section>

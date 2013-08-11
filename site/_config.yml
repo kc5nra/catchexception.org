@@ -1,2 +1,6 @@
 pygments: true
 relative_permalinks: false
+gauges_id: 51fc2b0ff5a1f50cfd000066
+ftp_host: terrell.dreamhost.com
+ftp_dir: /catchexception.org
+ftp_passive: false

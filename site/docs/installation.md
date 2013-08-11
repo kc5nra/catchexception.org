@@ -38,5 +38,35 @@ OBS
 
 {% endhighlight %}
 
+For CLR (.NET) Plugins it will look like this:
+
+{% highlight bash %}
+
+OBS
+├── OBS.exe (32bit)
+├── plugins (32bit)
+|   ├── plugin1.dll (32bit)
+|   └── CLRHostPlugin (32bit)
+|       └── clrplugin1.dll (universal/32bit) 
+├── ...
+└── 64bit
+    ├── OBS.exe (64bit)
+    ├── plugins (64bit)
+    |   ├── plugin1.dll (64bit)
+    |   └── CLRHostPlugin (64bit)
+    |       └── clrplugin1.dll (universal/64bit) 
+    └── ...
+
+{% endhighlight %}
+
+<div class="note info">
+  <h5>CLR Universal Plugins</h5>
+  <p>
+    Some, if not most, CLR (.NET) plugins are universal.  This means they are able to be loaded
+    from either 32bit or 64bit versions of OBS.   The main CLR Host Plugin, however, <em>is</em> platform
+    dependent.
+  </p>
+</div>
+
 Having completed this, you should be able to begin using your plugin from
 within OBS.
